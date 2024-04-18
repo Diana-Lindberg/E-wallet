@@ -1,7 +1,9 @@
+import './Top.css'
+
 function Top (title){
     return(
-    <div style={{height:'100px', width:'100vw', textAlign:'center'}}>
-        <h1 style={{fontFamily: 'sans-serif'}}>
+    <div className="header">
+        <h1 className='header_heading'>
             {title.title}
         </h1>
     </div>

@@ -58,17 +58,15 @@ function CardForm() {
       />
 
       <form onSubmit={handleSubmit} className="card_form">
-        <h2>Nytt Kort</h2>
-
+        
         <label>
           CARD NUMBER
           <input
             type="number"
             name="cardNumber"
-            placeholder="xxxx xxxx xxxx xxxx"
+            placeholder=""
             value={cardInfo.cardNumber}
             onChange={handleChange}
-            required
           />
         </label>
 
@@ -80,7 +78,6 @@ function CardForm() {
             placeholder="FIRSTNAME LASTNAME"
             value={cardInfo.cardHolder}
             onChange={handleChange}
-            required
           />
         </label>
 
@@ -92,7 +89,6 @@ function CardForm() {
             placeholder="MM/YY"
             value={cardInfo.validThru}
             onChange={handleChange}
-            required
           />
         </label>
 
@@ -104,7 +100,6 @@ function CardForm() {
             placeholder="xxx"
             value={cardInfo.cvc}
             onChange={handleChange}
-            required
           />
         </label>
 
@@ -114,7 +109,6 @@ function CardForm() {
             name="vendor"
             value={cardInfo.vendor}
             onChange={handleChange}
-            required
           >
             <option value="">Select Vendor</option>
             <option value="Bitcoin">BITCOIN INC</option>
