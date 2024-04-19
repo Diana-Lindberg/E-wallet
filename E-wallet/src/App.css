@@ -11,8 +11,10 @@ body{
 
 .new_card_button{
   font-weight: bolder;
+  font-size: 18px;
   border: 1px solid black;
   background-color: white;
+  font-family: pt mono, monospace;
   width: 350px;
   height: 60px;
   border-radius: 5px;

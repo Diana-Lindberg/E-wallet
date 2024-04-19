@@ -7,6 +7,22 @@ import { useNavigate } from "react-router-dom";
 
 function CardForm() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [cardInfo, setCardInfo] = useState({
+    cardNumber: "",
+    cardHolder: "",
+    validThru: "",
+    cvc: "",
+    vendor: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setCardInfo((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,23 +45,6 @@ function CardForm() {
     } else {
       alert("Fyll i alla fält");
     }
-  };
-
-  const [cardInfo, setCardInfo] = useState({
-    cardNumber: "",
-    cardHolder: "",
-    validThru: "",
-    cvc: "",
-    vendor: "",
-  });
-  const dispatch = useDispatch();
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setCardInfo((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
   };
 
   return (
@@ -118,7 +117,7 @@ function CardForm() {
           </select>
         </label>
         <button onClick={handleSubmit} className="add_button">
-          Add Card
+          ADD CARD
         </button>
       </form>
     </div>
