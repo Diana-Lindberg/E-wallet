@@ -63,7 +63,7 @@ function CardForm() {
           <input
             type="number"
             name="cardNumber"
-            placeholder=""
+            placeholder="xxxx xxxx xxxx xxxx"
             value={cardInfo.cardNumber}
             onChange={handleChange}
           />

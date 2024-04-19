@@ -28,7 +28,7 @@ const Card = (props) => {
             : props.vendor === "Evil corp"
             ? "#de2f4f"
             : props.vendor === "Ninja bank"
-            ? "#353535"
+            ? "#555555"
             : "#0000004A",
       }}
     >
